@@ -9,13 +9,17 @@ hook_source = '''
 [[plugins]]
 repo      = 'autozimu/LanguageClient-neovim'
 on_source = ['deoplete.nvim']
-build     = 'bash install.sh'
+build     = 'source install.sh'
 hook_source = '''
   let g:LanguageClient_autoStart      = 1
 
   let g:LanguageClient_serverCommands = {
     \ 'ruby': ['solargraph', 'stdio'],
   \}
+
+  nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+  nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+  nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 '''
 hook_post_source = '''
   call deoplete#custom#var('omni', 'input_patterns', {
