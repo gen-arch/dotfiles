@@ -1,4 +1,4 @@
-dotfiles="~/dotfile/"
+dotfiles=$(cd $(dirname $0); pwd)
 
 # .bashrc
 #==========================================================================================
@@ -21,13 +21,13 @@ export XDG_CONFIG_HOME="$HOME/dotfiles"
 #==========================================================================================
 #Alias
 #==========================================================================================
-alias_file="$(dirname $0)/aliasrc"
+alias_file="$(dotfiles)/aliasrc"
 [ -f $alias_file ] && source $alias_file
 #==========================================================================================
 #Prompt configurarion
 #==========================================================================================
-source "$(dirname $0)/git-prompt.sh"
-source "$(dirname $0)/git-completion.bash"
+source "$(dotfiles)/git-prompt.sh"
+source "$(dotfiles)/git-completion.bash"
 GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='\[\033[36;40;1m\] [\u@\h]\[\033[01;34m\] \w\[\033[00m\] \[\033[31m\]$(__git_ps1)\[\033[00m\]\[\033[01;34m\]\$\[\033[00m\]'
 
