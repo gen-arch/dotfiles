@@ -2,10 +2,11 @@ if &compatible
   set nocompatible
 endif
 
+let s:script_dir    = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 let s:dein_dir      = expand('~/.vim/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 let &runtimepath    = s:dein_repo_dir .",". &runtimepath
-let s:toml_dir      = expand("%:p/vim/dein/"')
+let s:toml_dir      = s:script_dir . '/vim/dein/'
 let s:toml          = s:toml_dir . 'dein.toml'
 let s:lazy_toml     = s:toml_dir . 'dein_lazy.toml'
 let s:deoplete_toml = s:toml_dir . 'deoplete.toml'
@@ -24,15 +25,14 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
   " Add or remove your plugins here like this:
-  if ((has('nvim')  || has('timers')) && has('python3')) && system('pip3 show neovim') !=# ''  && system('uname -a') !~ "Microsoft"
+  if has('nvim') && has('python3') && system('pip3 show neovim') !=# ''
     call dein#load_toml(s:deoplete_toml, {'lazy': 1})
     if !has('nvim')
       call dein#add ('roxma/nvim-yarp')
       call dein#add ('roxma/vim-hug-neovim-rpc')
     endif
-  elseif has('lua') || system('uname -a') =~ "Microsoft"
-    call dein#add ('Shougo/neocomplete.vim')
   endif
+
   call dein#end()
   call dein#save_state()
 endif
@@ -90,7 +90,6 @@ set tabstop=2
 " 行頭でのTab文字の表示幅
 set shiftwidth=2
 
-
 " 検索系
 " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
 set ignorecase
@@ -102,10 +101,10 @@ set incsearch
 set wrapscan
 " 検索語をハイライト表示
 set hlsearch
-" /{pattern}の入力中は「/」をタイプすると自動で「\/」が、
-" ?{pattern}の入力中は「?」をタイプすると自動で「\?」が 入力されるようになる"
-cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
-cnoremap <expr> ? getcmdtype() == '?' ? '\?' : '?'
+" 現在の行を強調表示
+set cursorline
+" 現在の行を強調表示（縦）
+set cursorcolumn
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
@@ -113,11 +112,3 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 syntax enable
 filetype plugin indent on
 let mapleader = ","
-
-" Program Execution
-autocmd BufNewFile,BufRead *.rb nnoremap <C-e> :!ruby %
-autocmd BufNewFile,BufRead *.py nnoremap <C-e> :!python %
-autocmd BufNewFile,BufRead *.pl nnoremap <C-e> :!perl %
-autocmd BufNewFile,BufRead *.sh nnoremap <C-e> :!source %
-autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
-autocmd BufNewFile,BufRead *.toml setlocal filetype=toml

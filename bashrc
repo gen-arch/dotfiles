@@ -1,4 +1,3 @@
-dotfiles=$(cd $(dirname $0); pwd)
 
 # .bashrc
 #==========================================================================================
@@ -14,20 +13,21 @@ fi
 #==========================================================================================
 #Export
 #==========================================================================================
+export DOT_FILE_PATH="$HOME/dotfiles"
 export PATH=$PATH:/sbin:/usr/sbin:$HOME/bin # パス
 export EDITOR='vim' # visudo とかで使われる
 export HISTSIZE=100000 # これだけコマンド履歴を残す
-export XDG_CONFIG_HOME="$HOME/dotfiles"
+export XDG_CONFIG_HOME=$DOT_FILE_PATH
 #==========================================================================================
 #Alias
 #==========================================================================================
-alias_file="$(dotfiles)/aliasrc"
+alias_file=$DOT_FILE_PATH/aliasrc
 [ -f $alias_file ] && source $alias_file
 #==========================================================================================
 #Prompt configurarion
 #==========================================================================================
-source "$(dotfiles)/git-prompt.sh"
-source "$(dotfiles)/git-completion.bash"
+source "$DOT_FILE_PATH/git-prompt.sh"
+source "$DOT_FILE_PATH/git-completion.bash"
 GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='\[\033[36;40;1m\] [\u@\h]\[\033[01;34m\] \w\[\033[00m\] \[\033[31m\]$(__git_ps1)\[\033[00m\]\[\033[01;34m\]\$\[\033[00m\]'
 
