@@ -32,9 +32,12 @@ repo      = 'junegunn/fzf'
 on_source = "LanguageClient-neovim"
 
 
+# [ruby]
+[[plugins]]
+repo  = 'tpope/vim-endwise'
+on_ft = ['ruby']
 
 ## knoowlage
-# [ruby]
 # gem install solargraph
 # yard gems
 # yard config --gem-install-yri
