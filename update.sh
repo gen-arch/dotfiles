@@ -1,4 +1,5 @@
 #!/bin/sh
+DOT_FILE_PATH="$HOME/dotfiles"
 rm $DOT_FILE_PATH/nvim/.vim
 rm $DOT_FILE_PATH/nvim/init.vim
 rm ~/.vimrc

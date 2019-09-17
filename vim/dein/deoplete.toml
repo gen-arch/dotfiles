@@ -30,3 +30,11 @@ hook_post_source = '''
 [[plugins]]
 repo      = 'junegunn/fzf'
 on_source = "LanguageClient-neovim"
+
+
+
+## knoowlage
+# [ruby]
+# gem install solargraph
+# yard gems
+# yard config --gem-install-yri

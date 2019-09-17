@@ -54,4 +54,4 @@ if [ -e ~/.ndenv ]; then
   export PATH="$HOME/.ndenv/bin:$PATH"
   eval "$(ndenv init -)"
 fi
-export SH_LOAD="exit"
+
