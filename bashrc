@@ -1,4 +1,3 @@
-
 # .bashrc
 #==========================================================================================
 # Source global definitions
@@ -26,8 +25,8 @@ alias_file=$DOT_FILE_PATH/aliasrc
 #==========================================================================================
 #Prompt configurarion
 #==========================================================================================
-source "$DOT_FILE_PATH/git-prompt.sh"
-source "$DOT_FILE_PATH/git-completion.bash"
+source "$DOT_FILE_PATH/scripts/git-prompt.sh"
+source "$DOT_FILE_PATH/scripts/git-completion.bash"
 GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='\[\033[36;40;1m\] [\u@\h]\[\033[01;34m\] \w\[\033[00m\] \[\033[31m\]$(__git_ps1)\[\033[00m\]\[\033[01;34m\]\$\[\033[00m\]'
 
