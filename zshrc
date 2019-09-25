@@ -158,29 +158,6 @@ PROMPT=$PROMPT'${vcs_info_msg_0_} %{${fg[red]}%}%}$%{${reset_color}%} '
 # プロンプト（右）
 RPROMPT='%{${fg[red]}%}[%~]%{${reset_color}%}'
 #=======================================
-#env
-#=======================================
-if [ -e ~/.rbenv ]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
-
-if [ -e ~/.pyenv ]; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
-fi
-if [ -e ~/.ndenv ]; then
-  export PATH="$HOME/.ndenv/bin:$PATH"
-  eval "$(ndenv init -)"
-fi
-if [ -e ~/.goenv ]; then
-  export GOENV_ROOT="$HOME/.goenv"
-  export PATH="$HOME/.goenv/bin:$PATH"
-  eval "$(goenv init -)"
-fi
-#=======================================
 #ローカル設定読み込み
 #=======================================
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
