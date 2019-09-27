@@ -108,6 +108,11 @@ set cursorcolumn
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
-"git clone https://github.com/tomasr/molokai ~/.vim/colors/
 syntax enable
 filetype plugin indent on
+
+autocmd BufNewFile,BufRead *.rb nnoremap <C-e> :!bundle exec ruby %
+autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
+autocmd BufNewFile,BufRead *.toml setlocal filetype=toml
+autocmd BufNewFile,BufRead *.ts   setlocal filetype=typescript
+autocmd BufNewFile,BufRead *.vue  setlocal filetype=vue

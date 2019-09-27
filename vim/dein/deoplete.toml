@@ -15,6 +15,8 @@ hook_source = '''
 
   let g:LanguageClient_serverCommands = {
     \ 'ruby': ['solargraph', 'stdio'],
+    \ 'vue':  ['vls'],
+    \ 'typescript':  ['typescript-language-server', '--stdio'],
   \}
 
   nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
@@ -32,7 +34,7 @@ repo      = 'junegunn/fzf'
 on_source = "LanguageClient-neovim"
 
 
-# [ruby]
+# [ruby]--------------------------------------------
 [[plugins]]
 repo  = 'tpope/vim-endwise'
 on_ft = ['ruby']
@@ -41,3 +43,39 @@ on_ft = ['ruby']
 # gem install solargraph
 # yard gems
 # yard config --gem-install-yri
+
+
+# [vue]---------------------------------------------
+#Vim syntax highlighting for Vue components.
+[[plugins]]
+repo  = 'posva/vim-vue'
+on_ft = ['vue']
+hook_post_source='''
+let g:ft = ''
+function! NERDCommenter_before()
+  if &ft == 'vue'
+    let g:ft = 'vue'
+    let stack = synstack(line('.'), col('.'))
+    if len(stack) > 0
+      let syn = synIDattr((stack)[0], 'name')
+      if len(syn) > 0
+        exe 'setf ' . substitute(tolower(syn), '^vue_', '', '')
+      endif
+    endif
+  endif
+endfunction
+function! NERDCommenter_after()
+  if g:ft == 'vue'
+    setf vue
+    let g:ft = ''
+  endif
+endfunction
+'''
+# [typescript]--------------------------------------
+# repo  = 'leafgarland/typescript-vim'
+# on_ft = ['typescript']
+
+
+
+
+
