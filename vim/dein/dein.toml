@@ -18,6 +18,9 @@ repo = 'itchyny/lightline.vim'
 repo = 'cohama/lexima.vim'
 
 [[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
 repo     = 'scrooloose/nerdtree'
 hook_add = '''
  map <C-n> :NERDTreeToggle<CR>

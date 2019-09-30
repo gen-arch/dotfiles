@@ -15,3 +15,62 @@ hook_port_source = '''
 [[plugins]]
 repo  = 'cespare/vim-toml'
 on_ft = ['toml']
+
+# vim起動中に実行
+[[plugins]]
+repo  = 'thinca/vim-quickrun'
+on_ft = ["ruby", "python", "perl"]
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo      = 'Shougo/neosnippet.vim'
+depends   = ['context_filetype.vim', 'neosnippet-snippets']
+on_event  = 'InsertCharPre'
+hook_post_source = '''
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
+let g:neosnippet#enable_snipmate_compatibility = 1
+let g:neosnippet#enable_completed_snippet      = 1
+let g:neosnippet#expand_word_boundary          = 1
+'''
+
+[[plugins]]
+repo      = "cohama/vim-smartinput-endwise"
+on_source = "vim-smartinput"
+
+#入力補助
+[[plugins]]
+repo      = 'kana/vim-smartinput'
+on_event  = 'InsertCharPre'
+hook_post_source = '''
+call smartinput#map_to_trigger('i', '<Space>', '<Space>', '<Space>')
+call smartinput#define_rule({
+\   'at'    : '(\%#)',
+\   'char'  : '<Space>',
+\   'input' : '<Space><Space><Left>',
+\   })
+call smartinput#define_rule({
+\   'at'    : '( \%# )',
+\   'char'  : '<BS>',
+\   'input' : '<Del><BS>',
+\   })
+call smartinput#map_to_trigger('i', '#', '#', '#')
+call smartinput#define_rule({
+\   'at'       : '\%#',
+\   'char'     : '#',
+\   'input'    : '#{}<Left>',
+\   'filetype' : ['ruby'],
+\   'syntax'   : ['Constant', 'Special'],
+\   })
+call smartinput#map_to_trigger('i', '<Bar>', '<Bar>', '<Bar>')
+call smartinput#define_rule({
+\   'at' : '\({\|\<do\>\)\s*\%#',
+\   'char' : '<Bar>',
+\   'input' : '<Bar><Bar><Left>',
+\   'filetype' : ['ruby'],
+\    })
+call smartinput_endwise#define_default_rules()
+'''
