@@ -72,8 +72,8 @@ function! NERDCommenter_after()
 endfunction
 '''
 # [typescript]--------------------------------------
-# repo  = 'leafgarland/typescript-vim'
-# on_ft = ['typescript']
+repo  = 'leafgarland/typescript-vim'
+on_ft = ['typescript']
 
 
 
