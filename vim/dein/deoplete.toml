@@ -19,6 +19,7 @@ hook_source = '''
     \ 'typescript':   ['typescript-language-server', '--stdio'],
     \ 'javascript':   ['typescript-language-server', '--stdio'],
     \ 'sh':           ['bash-language-server', 'start'],
+    \ 'zsh':          ['bash-language-server', 'start'],
     \ 'go':           ['gopls', '-mode', 'stdio'],
     \ 'python':       ['pyls'],
   \}

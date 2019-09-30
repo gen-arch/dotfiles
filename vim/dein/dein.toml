@@ -14,12 +14,15 @@ repo = 'bronson/vim-trailing-whitespace'
 [[plugin]]
 repo = 'itchyny/lightline.vim'
 
-[[plugin]]
-repo = 'cohama/lexima.vim'
-
+# contextでファイルタイプを変更
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
 
+# vim 差分表示
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+# output directory
 [[plugins]]
 repo     = 'scrooloose/nerdtree'
 hook_add = '''
