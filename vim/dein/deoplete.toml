@@ -14,9 +14,13 @@ hook_source = '''
   let g:LanguageClient_autoStart      = 1
 
   let g:LanguageClient_serverCommands = {
-    \ 'ruby': ['solargraph', 'stdio'],
-    \ 'vue':  ['vls'],
-    \ 'typescript':  ['typescript-language-server', '--stdio'],
+    \ 'ruby':         ['solargraph', 'stdio'],
+    \ 'vue':          ['vls'],
+    \ 'typescript':   ['typescript-language-server', '--stdio'],
+    \ 'javascript':   ['typescript-language-server', '--stdio'],
+    \ 'sh':           ['bash-language-server', 'start'],
+    \ 'go':           ['gopls', '-mode', 'stdio'],
+    \ 'python':       ['pyls'],
   \}
 
   nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
@@ -40,3 +44,22 @@ on_source = "LanguageClient-neovim"
 # yard gems
 # yard config --gem-install-yri
 
+# [sh]--------------------------------------------
+## knoowlage
+# npm i -g bash-language-server
+
+# [vue]--------------------------------------------
+## knoowlage
+# npm i -g vue-language-server
+
+# [go]--------------------------------------------
+## knoowlage
+# go get golang.org/x/tools/cmd/gopls
+
+# [python]--------------------------------------------
+## knoowlage
+# pip install python-language-server
+
+# [js & ts]--------------------------------------------
+## knoowlage
+# npm install -g typescript typescript-language-server
