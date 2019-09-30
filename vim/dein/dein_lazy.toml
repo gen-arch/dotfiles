@@ -37,10 +37,6 @@ let g:neosnippet#enable_completed_snippet      = 1
 let g:neosnippet#expand_word_boundary          = 1
 '''
 
-[[plugins]]
-repo      = "cohama/vim-smartinput-endwise"
-on_source = "vim-smartinput"
-
 #入力補助
 [[plugins]]
 repo      = 'kana/vim-smartinput'
@@ -74,3 +70,38 @@ call smartinput#define_rule({
 \    })
 call smartinput_endwise#define_default_rules()
 '''
+
+[[plugins]]
+repo      = "cohama/vim-smartinput-endwise"
+on_source = "vim-smartinput"
+
+# [vue]---------------------------------------------
+#Vim syntax highlighting for Vue components.
+[[plugins]]
+repo  = 'posva/vim-vue'
+on_ft = ['vue']
+hook_post_source='''
+let g:ft = ''
+function! NERDCommenter_before()
+  if &ft == 'vue'
+    let g:ft = 'vue'
+    let stack = synstack(line('.'), col('.'))
+    if len(stack) > 0
+      let syn = synIDattr((stack)[0], 'name')
+      if len(syn) > 0
+        exe 'setf ' . substitute(tolower(syn), '^vue_', '', '')
+      endif
+    endif
+  endif
+endfunction
+function! NERDCommenter_after()
+  if g:ft == 'vue'
+    setf vue
+    let g:ft = ''
+  endif
+endfunction
+'''
+# [typescript]--------------------------------------
+[[plugins]]
+repo  = 'leafgarland/typescript-vim'
+on_ft = ['typescript']
