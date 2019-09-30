@@ -22,6 +22,10 @@ repo = 'Shougo/context_filetype.vim'
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 
+# git 便利ツール
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
 # output directory
 [[plugins]]
 repo     = 'scrooloose/nerdtree'
