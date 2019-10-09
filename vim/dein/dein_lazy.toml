@@ -105,3 +105,8 @@ endfunction
 [[plugins]]
 repo  = 'leafgarland/typescript-vim'
 on_ft = ['typescript']
+
+# [python]--------------------------------------
+[[plugins]]
+repo  = 'hdima/python-syntax'
+on_ft = ['python']

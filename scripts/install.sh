@@ -8,7 +8,8 @@ goenv() {
 rbenv() {
   if [ ! -e ~/.rbenv ]; then
     git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-    # cd ~/.rbenv && src/configure && make -C src
+    git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+    cd ~/.rbenv && src/configure && make -C src
   fi
 }
 

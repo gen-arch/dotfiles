@@ -112,6 +112,7 @@ syntax enable
 filetype plugin indent on
 
 autocmd BufNewFile,BufRead *.rb nnoremap <C-e> :!bundle exec ruby %
+autocmd BufNewFile,BufRead *.sh nnoremap <C-e> :!source %
 autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
 autocmd BufNewFile,BufRead *.toml setlocal filetype=toml
 autocmd BufNewFile,BufRead *.ts   setlocal filetype=typescript

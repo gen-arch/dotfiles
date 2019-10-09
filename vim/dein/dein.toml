@@ -2,6 +2,10 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+# dein-ui
+[[plugins]]
+repo = 'wsdjeg/dein-ui.vim'
+
 # インデントを可視化
 [[plugins]]
 repo = 'Yggdroot/indentLine'
@@ -72,3 +76,6 @@ noremap <C-p> :Unite buffer<CR>
 [[plugin]]
 repo    = 'Shougo/unite-outline'
 depends = 'Unite'
+
+[[plugin]]
+repo    = 'twitvim/twitvim'
