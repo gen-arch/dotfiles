@@ -22,6 +22,7 @@ pyenv() {
 nodenv() {
   if [ ! -e ~/.nodenv ]; then
     git clone https://github.com/nodenv/nodenv.git ~/.nodenv
+    git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
     cd ~/.nodenv && src/configure && make -C src
   fi
 }
