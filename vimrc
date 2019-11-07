@@ -110,7 +110,6 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " us keyboard
 nnoremap ; :
-nnoremap : ;
 
 syntax enable
 filetype plugin indent on
