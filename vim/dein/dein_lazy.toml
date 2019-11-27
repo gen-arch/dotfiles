@@ -110,3 +110,20 @@ on_ft = ['typescript']
 [[plugins]]
 repo  = 'hdima/python-syntax'
 on_ft = ['python']
+
+# [markdown]--------------------------------------
+[[plugins]]
+repo  = 'plasticboy/vim-markdown'
+on_ft = ['markdown']
+hook_post_source='''
+let g:vim_markdown_folding_disabled = 1
+'''
+
+[[plugins]]
+repo  = 'godlygeek/tabular'
+on_ft = ['markdown']
+
+
+[[plugins]]
+repo  = 'greyblake/vim-preview'
+on_ft = ['markdown']

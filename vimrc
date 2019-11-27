@@ -120,3 +120,4 @@ autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
 autocmd BufNewFile,BufRead *.toml setlocal filetype=toml
 autocmd BufNewFile,BufRead *.ts   setlocal filetype=typescript
 autocmd BufNewFile,BufRead *.vue  setlocal filetype=vue
+autocmd BufNewFile,BufRead \*.{md,mdwn,mkd,mkdn,mark\*} set filetype=markdown
