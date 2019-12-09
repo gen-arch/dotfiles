@@ -2,9 +2,6 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-[[plugins]]
-repo = 'wsdjeg/dein-ui.vim'
-
 # dein-ui
 [[plugins]]
 repo = 'wsdjeg/dein-ui.vim'
@@ -56,6 +53,16 @@ hook_add = '''
  call NERDTreeHighlightFile('php',    'Magenta', 'none', '#ff00ff', '#151515')
 '''
 
+[[plugins]]
+repo     = 'Shougo/denite.nvim'
+hook_post_source = '''
+call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+call denite#custom#var('grep', 'command', ['ag'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', [])
+call denite#custom#var('grep', 'default_opts', ['--follow', '--no-group', '--no-color'])
+'''
+
 # comment out
 [[plugins]]
 repo     = 'scrooloose/nerdcommenter'
@@ -68,17 +75,3 @@ hook_add = '''
 [[plugins]]
 repo     = 'tomasr/molokai'
 hook_add = 'colorscheme molokai'
-
-[[plugin]]
-repo     = 'Shougo/Unite.vim'
-hook_add = '''
-let g:unite_enable_stat_insert = 1
-noremap <C-p> :Unite buffer<CR>
-'''
-
-[[plugin]]
-repo    = 'Shougo/unite-outline'
-depends = 'Unite'
-
-[[plugin]]
-repo    = 'twitvim/twitvim'
