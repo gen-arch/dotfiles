@@ -127,3 +127,10 @@ on_ft = ['markdown']
 [[plugins]]
 repo  = 'greyblake/vim-preview'
 on_ft = ['markdown']
+
+[[plugins]]
+repo = 'slim-template/vim-slim'
+on_ft = ['slim']
+hook_post_source='''
+autocmd BufRead,BufNewFile *.slim setfiletype slim
+'''
