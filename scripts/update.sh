@@ -1,24 +1,23 @@
 #!/bin/sh
-script_dir=$(cd $(dirname $0); pwd)
-config_dir=$(cd $script_dir; cd ..; pwd)
-source $config_dir/environment.sh
+readonly DIR=$(cd $(dirname $0); pwd)
+readonly ROOT=$(cd $DIR; cd ..; pwd)
+readonly CONF=$(cd $DIR; cd ../configs; pwd)
 
-nvim_dir=$XDG_CONFIG_HOME/nvim
+source $DIR/environment.sh
+source $DIR/lib/functions.sh
 
-[ ! -e $nvim_dir ] && mkdir -p $nvim_dir
+dotfiles=(
+  'vimrc'
+  'zshrc'
+  'tmux.conf'
+  'bashrc'
+  'hyper.js'
+)
 
-rm $nvim_dir/.vim
-rm $nvim_dir/init.vim
-rm ~/.vimrc
-rm ~/.zshrc
-rm ~/.tmux.conf
-rm ~/.bashrc
-rm ~/.hyper.js
+nvim_setup
 
-ln -s ~/.vim                $nvim_dir/
-ln -s $config_dir/vimrc     $nvim_dir/init.vim
-ln -s $config_dir/vimrc     ~/.vimrc
-ln -s $config_dir/tmux.conf ~/.tmux.conf
-ln -s $config_dir/bashrc    ~/.bashrc
-ln -s $config_dir/zshrc     ~/.zshrc
-ln -s $config_dir/hyper.js  ~/.hyper.js
+for file in ${dotfiles[@]}
+do
+  remove_file $file
+  symlink     $file
+done
