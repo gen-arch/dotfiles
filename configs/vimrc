@@ -2,7 +2,7 @@ if &compatible
   set nocompatible
 endif
 
-let s:script_dir    = fnamemodify(resolve(expand('<sfile>:p')), ':h')
+let s:script_dir    = expand('~/dotfiles')
 let s:dein_dir      = expand('~/.vim/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 let &runtimepath    = s:dein_repo_dir .",". &runtimepath
