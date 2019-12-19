@@ -12,6 +12,7 @@ dotfiles=(
   'tmux.conf'
   'bashrc'
   'hyper.js'
+  'aliasrc'
 )
 
 nvim_setup
