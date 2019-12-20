@@ -27,11 +27,16 @@ nodenv() {
   fi
 }
 
+anyframe() {
+  git clone https://github.com/mollifier/anyframe ~/.temp/anyframe
+}
+
 main() {
   goenv
   rbenv
   pyenv
   nodenv
+  anyframe
 }
 
 main
