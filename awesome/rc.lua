@@ -90,6 +90,7 @@ local chosen_theme = themes[5]
 local modkey       = "Mod4"
 local altkey       = "Mod1"
 local terminal     = "gnome-terminal"
+local chat         = "slack"
 local editor       = os.getenv("EDITOR") or "vim"
 local gui_editor   = "code"
 local browser      = "google-chrome-stable"
@@ -99,11 +100,12 @@ local scrlocker    = "slock"
 awful.util.terminal = terminal
 awful.util.tagnames = { "1", "2", "3", "4", "5" }
 awful.layout.layouts = {
-    awful.layout.suit.floating,
+    awful.layout.suit.max,
     awful.layout.suit.tile,
-    awful.layout.suit.tile.left,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
+    awful.layout.suit.tile,
+    awful.layout.suit.tile,
+    awful.layout.suit.tile,
+    --awful.layout.suit.floating,
     --awful.layout.suit.fair,
     --awful.layout.suit.fair.horizontal,
     --awful.layout.suit.spiral,
@@ -507,6 +509,8 @@ globalkeys = my_table.join(
               {description = "run browser", group = "launcher"}),
     awful.key({ modkey }, "a", function () awful.spawn(guieditor) end,
               {description = "run gui editor", group = "launcher"}),
+    awful.key({ modkey }, "f", function () awful.spawn(chat) end,
+              {description = "run chat", group = "launcher"}),
 
     -- Default
     --[[ Menubar

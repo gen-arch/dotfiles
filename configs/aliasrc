@@ -43,3 +43,6 @@ alias gr='git reset --hard'
 alias gp='git push origin HEAD'
 alias gclone='git clone --recursive'
 alias gitsub='git submodule foreach'
+
+# ssh
+alias ssh='TERM=xterm; ssh'

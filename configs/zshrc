@@ -1,7 +1,7 @@
 #=======================================
 #環境変数
 #=======================================
-[ -f $HOME/dotfiles/environment.sh ] && source $HOME/dotfiles/environment.sh
+[ -f $HOME/dotfiles/scripts/environment.sh ] && source $HOME/dotfiles/scripts/environment.sh
 #=======================================
 #基本設定
 #=======================================
@@ -114,7 +114,7 @@ fi
 #=======================================
 #エイリアス
 #=======================================
-[ -f $DOT_FILE_PATH/aliasrc ] && source $DOT_FILE_PATH/aliasrc
+[ -f ~/.aliasrc ] && source ~/.aliasrc
 
 #=======================================
 #モジュール(http://zsh.sourceforge.net/Doc/Release/Completion-System.html#Standard-Styles)
