@@ -14,3 +14,11 @@ if [ -e ~/.anyenv ]; then
  export PATH="$HOME/.anyenv/bin:$PATH"
  eval "$(anyenv init -)"
 fi
+
+if [ -e ~/go ]; then
+  export GOROOT=$HOME/go
+  export GOPATH=$GOROOT/packages
+  export PATH=$PATH:$GOROOT/bin
+fi
+
+
