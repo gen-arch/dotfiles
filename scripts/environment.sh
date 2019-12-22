@@ -16,9 +16,8 @@ if [ -e ~/.anyenv ]; then
 fi
 
 if [ -e ~/go ]; then
-  export GOROOT=$HOME/go
-  export GOPATH=$GOROOT/packages
-  export PATH=$PATH:$GOROOT/bin
+  local version=`goenv version | awk '{ print $1}'`
+  export GOENV_ROOT=$HOME/.anyenv/envs/goenv
+  export GOPATH=$HOME/go/$version
+  export PATH=$GOENV_ROOT/bin:$GOPATH/bin:$PATH
 fi
-
-
