@@ -1,0 +1,5 @@
+package: main
+import:
+  - pacage: github.com/src-d/go-git
+    vcs: git
+    repo: git@github.com:src-d/go-git.git

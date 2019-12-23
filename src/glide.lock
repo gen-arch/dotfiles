@@ -1,0 +1,8 @@
+hash: 7f6c9f61cc2ff8df0bfe65e328a715acd89a25b2c7fa678799cc132b4bd3e748
+updated: 2019-12-20T23:23:57.209304455+09:00
+imports:
+- name: ""
+  version: 1a7db85bca7027d90afdb5ce711622aaac9feaed
+  repo: git@github.com:src-d/go-git.git
+  vcs: git
+testImports: []
