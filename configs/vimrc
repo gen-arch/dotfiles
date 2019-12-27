@@ -10,6 +10,7 @@ let s:toml_dir      = s:script_dir . '/vim/dein/'
 let s:toml          = s:toml_dir . 'dein.toml'
 let s:lazy_toml     = s:toml_dir . 'dein_lazy.toml'
 let s:deoplete_toml = s:toml_dir . 'deoplete.toml'
+let s:lsp_toml      = s:toml_dir . 'lsp.toml'
 
 if !isdirectory(s:dein_repo_dir)
   call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
@@ -20,6 +21,7 @@ if dein#load_state(s:dein_dir)
 
   " 起動時に読み込むプラグイン群
   call dein#load_toml(s:toml,      {'lazy': 0})
+  call dein#load_toml(s:lsp_toml,  {'lazy': 0})
 
   " 遅延読み込みしたいプラグイン群
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
