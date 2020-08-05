@@ -128,9 +128,15 @@ on_ft = ['markdown']
 repo  = 'greyblake/vim-preview'
 on_ft = ['markdown']
 
+# [slim]--------------------------------------
 [[plugins]]
-repo = 'slim-template/vim-slim'
+repo  = 'slim-template/vim-slim'
 on_ft = ['slim']
 hook_post_source='''
 autocmd BufRead,BufNewFile *.slim setfiletype slim
 '''
+
+# [terraform]--------------------------------------
+[[plugins]]
+repo  = 'hashivim/vim-terraform'
+on_ft = ['terraform']

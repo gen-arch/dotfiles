@@ -71,10 +71,15 @@ hook_add = '''
   let g:NERDDefaultAlign = 'left'
 '''
 
-#colorschema molokai
+##colorschema molokai
 [[plugins]]
-repo     = 'tomasr/molokai'
-hook_add = 'colorscheme molokai'
+repo = 'tomasr/molokai'
+hook_add = '''
+augroup SetColorScheme
+    au!
+    au VimEnter * nested colorscheme molokai
+augroup END
+    '''
 
 [[plugins]]
 repo = 'prabirshrestha/async.vim'
