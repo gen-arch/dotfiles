@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #dotfiles
 export DOT_FILE_PATH="$HOME/dotfiles"
 #nvim
@@ -20,4 +20,15 @@ if [ -e ~/go ]; then
   export GOENV_ROOT=$HOME/.anyenv/envs/goenv
   export GOPATH=$HOME/go/$version
   export PATH=$GOENV_ROOT/bin:$GOPATH/bin:$PATH
+fi
+
+if [ "$TMUX" != "true" ]; then
+  export TMUX="true"
+  tmux
+fi
+
+if [ "$LOG" != "true" ] && [ -f $HOME/.log.validity ]; then
+  export LOG="true"
+  [ -f $HOME/log ] && mkdir $HOME/log
+  script -a $HOME/log/terminal-log.`date "+%Y%m%H%M%S"`
 fi
