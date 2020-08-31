@@ -1,5 +1,17 @@
 [[plugins]]
 repo      = 'prabirshrestha/vim-lsp'
+hook_ad   = '''
+nmap <buffer> <F12> <Plug>(lsp-definition)
+nmap <buffer> <C-]> <Plug>(lsp-definition)
+nmap <buffer> K <Plug>(lsp-hover)
+nmap <buffer> <C-n> <plug>(lsp-next-error)
+nmap <buffer> <C-p> <plug>(lsp-previous-error)
+nmap <buffer> <S-F12> <plug>(lsp-references)
+nmap <buffer> <S-F6> <plug>(lsp-rename)
+nmap <buffer> =- <plug>(lsp-document-format)
+nmap <buffer> <F11> <plug>(lsp-implementation)
+nmap <buffer> <F2> <plug>(lsp-type-definition)
+'''
 
 [[plugins]]
 repo      = 'prabirshrestha/async.vim'
