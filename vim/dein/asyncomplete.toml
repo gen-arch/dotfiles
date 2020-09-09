@@ -1,16 +1,6 @@
 [[plugins]]
 repo        = 'prabirshrestha/asyncomplete.vim'
 on_event    = 'InsertEnter'
-hook_source = '''
-let g:asyncomplete_auto_completeopt = 0
-set completeopt=menuone,noinsert,noselect,preview
-
-imap  <c-space>  <Plug>（asyncomplete_force_refresh)
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-'''
 
 [[plugins]]
 repo        = 'prabirshrestha/asyncomplete-lsp.vim'

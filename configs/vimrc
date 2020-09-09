@@ -51,8 +51,6 @@ if dein#check_install()
 endif
 
 " setting
-" mouse true
-set mouse=a
 " スクロールする時に下が見えるようにする
 set scrolloff=5
 "文字コードをUFT-8に設定
