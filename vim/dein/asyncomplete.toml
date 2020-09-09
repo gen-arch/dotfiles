@@ -1,7 +1,7 @@
 [[plugins]]
 repo        = 'prabirshrestha/asyncomplete.vim'
-on_event    = 'InsertEnter'
+#on_event    = 'InsertEnter'
 
 [[plugins]]
 repo        = 'prabirshrestha/asyncomplete-lsp.vim'
-on_source   = 'asyncomplete.vim'
+#on_source   = 'asyncomplete.vim'
