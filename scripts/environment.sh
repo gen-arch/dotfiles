@@ -9,7 +9,7 @@ export EDITOR=vim
 export HISTSIZE=10000
 #PATH追加
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/bin
-export TERM=exterm-256color
+export TERM=xterm-256color
 
 
 if [ -e ~/.anyenv ]; then
