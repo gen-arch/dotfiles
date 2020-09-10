@@ -102,13 +102,10 @@ function! NERDCommenter_after()
 endfunction
 '''
 # [typescript]--------------------------------------
-#[[plugins]]
-#repo  = 'leafgarland/typescript-vim'
-#on_ft = ['typescript']
 
-[[plugins]]
-repo  = 'ryanolsonx/vim-lsp-typescript'
-on_ft = ['typescript']
+#[[plugins]]
+#repo  = 'ryanolsonx/vim-lsp-typescript'
+#on_ft = ['typescript']
 
 
 # [python]--------------------------------------

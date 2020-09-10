@@ -27,20 +27,20 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml(s:lsp_toml,  {'lazy': 0})
 
   " 遅延読み込みしたいプラグイン群
-  "call dein#load_toml(s:lazy_toml, {'lazy': 1})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
   if s:complate == 'deoplate'
     " Add or remove your plugins here like this:
-    if has('nvim') && has('python3') && system('pip3 show neovim') !=# ''
+    if has('python3') && system('pip3 show neovim') !=# ''
       call dein#load_toml(s:deoplete_toml, {'lazy': 1})
+
       if !has('nvim')
         call dein#add ('roxma/nvim-yarp')
         call dein#add ('roxma/vim-hug-neovim-rpc')
       endif
     endif
   elseif s:complate == 'asyncomplete'
-    "call dein#load_toml(s:asyncomplete_toml, {'lazy': 1})
-    call dein#load_toml(s:asyncomplete_toml, {'lazy': 0})
+    call dein#load_toml(s:asyncomplete_toml, {'lazy': 1})
   endif
 
   call dein#end()
