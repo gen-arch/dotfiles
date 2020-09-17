@@ -22,13 +22,13 @@ if [ -e ~/go ]; then
   export PATH=$GOENV_ROOT/bin:$GOPATH/bin:$PATH
 fi
 
-if [ "$TMUX" != "true" ]; then
-  export TMUX="true"
-  tmux
+if [ "$TMUX_MODE" != "true" ]; then
+  export TMUX_MODE="true"
+  eval tmux
 fi
 
-if [ "$LOG" != "true" ] && [ -f $HOME/.log.validity ]; then
-  export LOG="true"
+if [ "$LOG_MODE" != "true" ] && [ -f $HOME/.log.validity ]; then
+  export LOG_mode="true"
   [ -f $HOME/log ] && mkdir $HOME/log
   script -a $HOME/log/terminal-log.`date "+%Y%m%H%M%S"`
 fi
