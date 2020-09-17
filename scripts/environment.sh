@@ -26,7 +26,7 @@ fi
 
 if [ "$TMUX_MODE" != "true" ]; then
   export TMUX_MODE="true"
-  eval tmux
+  tmux
 fi
 
 if [ "$LOG_MODE" != "true" ] && [ -f $HOME/.log.validity ]; then
