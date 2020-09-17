@@ -1,4 +1,8 @@
 #=======================================
+#ローカル設定即時読みこみ
+#=======================================
+[ -f ~/.zshrc.first ] && source ~/.zshrc.first
+#=======================================
 #環境変数
 #=======================================
 [ -f $HOME/dotfiles/scripts/environment.sh ] && source $HOME/dotfiles/scripts/environment.sh
