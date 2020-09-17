@@ -1,9 +1,10 @@
 #!/bin/sh
 alias vi="vim"
-#!if type nvim &> /dev/null; then
-#!  alias vi="nvim"
-#!  export EDITOR=nvim
-#!fi
+
+if type nvim &> /dev/null; then
+  alias vi="nvim"
+  export EDITOR=nvim
+fi
 
 # bundler
 alias be="bundle exec"

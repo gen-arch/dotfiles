@@ -12,10 +12,6 @@ hook_port_source = '''
   call submode#map('bufmove', 'n', '', '-', '<C-w>-')
 '''
 
-[[plugins]]
-repo  = 'cespare/vim-toml'
-on_ft = ['toml']
-
 # vim起動中に実行
 [[plugins]]
 repo  = 'thinca/vim-quickrun'
@@ -101,15 +97,6 @@ function! NERDCommenter_after()
   endif
 endfunction
 '''
-# [typescript]--------------------------------------
-#[[plugins]]
-#repo  = 'leafgarland/typescript-vim'
-#on_ft = ['typescript']
-
-[[plugins]]
-repo  = 'ryanolsonx/vim-lsp-typescript'
-on_ft = ['typescript']
-
 
 # [python]--------------------------------------
 [[plugins]]
@@ -145,3 +132,9 @@ autocmd BufRead,BufNewFile *.slim setfiletype slim
 [[plugins]]
 repo  = 'hashivim/vim-terraform'
 on_ft = ['terraform']
+
+# [toml]--------------------------------------
+[[plugins]]
+repo  = 'cespare/vim-toml'
+on_ft = ['toml']
+

@@ -12,7 +12,7 @@ let s:lazy_toml           = s:toml_dir . 'dein_lazy.toml'
 let s:deoplete_toml       = s:toml_dir . 'deoplete.toml'
 let s:lsp_toml            = s:toml_dir . 'lsp.toml'
 let s:asyncomplete_toml   = s:toml_dir . 'asyncomplete.toml'
-let s:complate            = 'asyncomplete'
+let s:complate            = 'deoplate'
 
 if !isdirectory(s:dein_repo_dir)
   call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
@@ -30,8 +30,9 @@ if dein#load_state(s:dein_dir)
 
   if s:complate == 'deoplate'
     " Add or remove your plugins here like this:
-    if has('nvim') && has('python3') && system('pip3 show neovim') !=# ''
+    if has('python3') && system('pip3 show neovim') !=# ''
       call dein#load_toml(s:deoplete_toml, {'lazy': 1})
+
       if !has('nvim')
         call dein#add ('roxma/nvim-yarp')
         call dein#add ('roxma/vim-hug-neovim-rpc')
@@ -51,8 +52,6 @@ if dein#check_install()
 endif
 
 " setting
-" mouse true
-set mouse=a
 " スクロールする時に下が見えるようにする
 set scrolloff=5
 "文字コードをUFT-8に設定
@@ -126,9 +125,11 @@ filetype plugin indent on
 
 autocmd BufNewFile,BufRead *.rb nnoremap <C-e> :!bundle exec ruby %
 autocmd BufNewFile,BufRead *.sh nnoremap <C-e> :!source %
-autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
-autocmd BufNewFile,BufRead *.toml setlocal filetype=toml
-autocmd BufNewFile,BufRead *.ts   setlocal filetype=typescript
-autocmd BufNewFile,BufRead *.vue  setlocal filetype=vue
+autocmd BufNewFile,BufRead *.slim       setlocal filetype=slim
+autocmd BufNewFile,BufRead *.toml       setlocal filetype=toml
+autocmd BufNewFile,BufRead *.ts         setlocal filetype=typescript
+autocmd BufNewFile,BufRead *.vue        setlocal filetype=vue
+autocmd BufNewFile,BufRead *.vue        setlocal filetype=vue
+autocmd BufNewFile,BufRead Vagrantfile  setlocal filetype=ruby
 autocmd BufNewFile,BufRead \*.{md,mdwn,mkd,mkdn,mark\*} set filetype=markdown
 autocmd QuickFixCmdPost *grep* cwindow
