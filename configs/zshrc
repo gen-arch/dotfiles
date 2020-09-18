@@ -98,6 +98,12 @@ bindkey '^@' anyframe-widget-cd-ghq-repository
 # コマンドを履歴から検索・実行する
 bindkey '^r' anyframe-widget-put-history
 
+# console
+bindkey '^k' kill-line
+bindkey '^u' kill-whole-line
+bindkey '^a' beginning-of-line
+bindkey '^e' end-of-line
+
 #=======================================
 #関数
 #=======================================
