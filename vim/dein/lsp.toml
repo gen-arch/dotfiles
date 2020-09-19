@@ -1,15 +1,13 @@
 [[plugins]]
 repo      = 'prabirshrestha/vim-lsp'
 hook_add  = '''
-nmap <buffer> <F12> <Plug>(lsp-definition)
-nmap <buffer> <F12> <Plug>(lsp-definition)
-nmap <buffer> <C-J> <Plug>(lsp-definition)
-nmap <buffer> K <Plug>(lsp-hover)
-nmap <buffer> <S-F12> <plug>(lsp-references)
-nmap <buffer> <S-F6> <plug>(lsp-rename)
-nmap <buffer> =- <plug>(lsp-document-format)
-nmap <buffer> <F11> <plug>(lsp-implementation)
-nmap <buffer> <F2> <plug>(lsp-type-definition)
+nm <buffer> <F12>   <plug>(lsp-definition)
+nm <buffer> <F11>   <plug>(lsp-peek-definition)
+nm <buffer> K       <plug>(lsp-hover)
+nm <buffer> <S-F12> <plug>(lsp-references)
+nm <buffer> <S-F6>  <plug>(lsp-rename)
+nm <buffer> =-      <plug>(lsp-document-format)
+nm <buffer> <F2>    <plug>(lsp-type-definition)
 '''
 
 [[plugins]]
