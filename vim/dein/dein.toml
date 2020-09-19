@@ -75,15 +75,5 @@ hook_add = '''
 [[plugins]]
 repo = 'tomasr/molokai'
 hook_add = '''
-augroup SetColorScheme
-    au!
-    au VimEnter * nested colorscheme molokai
-augroup END
-    '''
-
-[[plugins]]
-repo = 'prabirshrestha/async.vim'
-[[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-[[plugins]]
-repo = 'mattn/vim-lsp-settings'
+colorscheme molokai
+'''

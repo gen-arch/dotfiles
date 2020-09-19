@@ -9,10 +9,6 @@ hook_source = '''
 repo = 'lighttiger2505/deoplete-vim-lsp'
 on_source = 'deoplete.nvim'
 
-[[plugin]]
-repo  = "mhartington/nvim-typescript"
-on_ft = ['typescript']
-
 # [ruby]--------------------------------------------
 ## knoowlage
 # gem install solargraph
