@@ -8,7 +8,7 @@ export EDITOR=vim
 # メモリに保存する履歴の件数を指定する
 export HISTSIZE=10000
 #PATH追加
-export PATH=$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/bin
+export PATH=$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/dotfiles/bin
 export TERM=xterm-256color
 
 
