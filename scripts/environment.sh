@@ -29,6 +29,10 @@ if [ "$TMUX_MODE" != "true" ]; then
   tmux
 fi
 
+if type "direnv" > /dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi
+
 if [ "$LOG_MODE" != "true" ] && [ -f $HOME/.log.validity ]; then
   export LOG_mode="true"
   [ -f $HOME/log ] && mkdir $HOME/log
