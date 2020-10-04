@@ -100,20 +100,12 @@ endfunction
 '''
 
 # [markdown]--------------------------------------
-[[plugins]]
-repo  = 'plasticboy/vim-markdown'
-on_ft = ['markdown']
-hook_post_source='''
-let g:vim_markdown_folding_disabled = 1
-'''
+#[[plugins]]
+#repo  = 'tpope/vim-markdown'
+#on_ft = ['markdown']
 
 [[plugins]]
-repo  = 'godlygeek/tabular'
-on_ft = ['markdown']
-
-
-[[plugins]]
-repo  = 'greyblake/vim-preview'
+repo  = 'gabrielelana/vim-markdown'
 on_ft = ['markdown']
 
 # [slim]--------------------------------------

@@ -1,5 +1,7 @@
 #!/bin/sh
 function env_install() {
+  os=`uname -a`
+  if []
   if [ ! -e ~/.anyenv ]; then
     git clone https://github.com/anyenv/anyenv ~/.anyenv
   fi
