@@ -132,3 +132,9 @@ hook_add = '''
 let g:vim_json_syntax_conceal = 0
 '''
 on_ft = ['json']
+
+
+# [terraform]--------------------------------------
+[[plugins]]
+repo = 'hashivim/vim-terraform'
+on_ft = ['terraform']
