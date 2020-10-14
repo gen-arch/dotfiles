@@ -69,7 +69,7 @@ set showcmd
 " バックスペース有効化
 set backspace=indent,eol,start
 
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " 見た目系
 " 行番号を表示
