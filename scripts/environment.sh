@@ -34,7 +34,7 @@ if type "direnv" > /dev/null 2>&1; then
 fi
 
 if [ "$LOG_MODE" != "true" ] && [ -f $HOME/.log.validity ]; then
-  export LOG_mode="true"
+  export LOG_MODE="true"
   [ -f $HOME/log ] && mkdir $HOME/log
   script -a $HOME/log/terminal-log.`date "+%Y%m%H%M%S"`
 fi
