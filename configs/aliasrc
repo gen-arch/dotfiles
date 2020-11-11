@@ -44,3 +44,6 @@ alias gitsub='git submodule foreach'
 
 # ssh
 alias ssh='TERM=xterm; ssh'
+
+# lang
+alias laenc='LANG="ja_JP.eucJP"'

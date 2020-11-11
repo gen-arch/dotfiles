@@ -172,3 +172,8 @@ ${vcs_info_msg_0_} %{${fg[red]}%}%}$%{${reset_color}%} >> '
 #ローカル設定読み込み
 #=======================================
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+#=======================================
+#aws cli complate
+#=======================================
+[ -f $HOME/dotfiles/scripts/aws_cli_complete.sh ] && source $HOME/dotfiles/scripts/aws_cli_complete.sh
+#=======================================
