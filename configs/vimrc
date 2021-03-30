@@ -126,6 +126,7 @@ autocmd BufNewFile,BufRead *.vue        setlocal filetype=vue
 autocmd BufNewFile,BufRead *.vue        setlocal filetype=vue
 autocmd BufNewFile,BufRead Vagrantfile  setlocal filetype=ruby
 autocmd BufNewFile,BufRead *.tf         setlocal filetype=terraform
+autocmd BufNewFile,BufRead .envrc       setlocal filetype=bash
 autocmd BufNewFile,BufRead \*.{md,mdwn,mkd,mkdn,mark\*} set filetype=markdown
 autocmd QuickFixCmdPost *grep* cwindow
 
@@ -135,4 +136,12 @@ if system('uname -a | grep -i microsoft') != ''
     autocmd!
     autocmd TextYankPost * :call system('clip.exe', @")
   augroup END
+endif
+
+if executable('terraform-ls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'terraform-ls',
+        \ 'cmd': {server_info->['terraform-ls', 'serve']},
+        \ 'whitelist': ['terraform'],
+        \ })
 endif

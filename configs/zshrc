@@ -177,3 +177,4 @@ ${vcs_info_msg_0_} %{${fg[red]}%}%}$%{${reset_color}%} >> '
 #=======================================
 [ -f $HOME/dotfiles/scripts/aws_cli_complete.sh ] && source $HOME/dotfiles/scripts/aws_cli_complete.sh
 #=======================================
+
