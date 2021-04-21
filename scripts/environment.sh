@@ -7,6 +7,8 @@ export XDG_CONFIG_HOME=$HOME/.config
 export EDITOR=vim
 # メモリに保存する履歴の件数を指定する
 export HISTSIZE=10000
+export HISTFILE=${HOME}/.zsh_history
+export SAVEHIST=100000
 #PATH追加
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/dotfiles/bin
 export TERM=xterm-256color
