@@ -28,7 +28,7 @@ fi
 
 if [ "$TMUX_MODE" != "true" ]; then
   export TMUX_MODE="true"
-  tmux
+  tmux -2
 fi
 
 if type "direnv" > /dev/null 2>&1; then
