@@ -6,18 +6,20 @@ readonly CONF=$(cd $DIR; cd ../configs; pwd)
 source $DIR/environment.sh
 source $DIR/lib/functions.sh
 
-dotfiles=(
-  'vimrc'
-  'zshrc'
-  'tmux.conf'
-  'bashrc'
-  'hyper.js'
-  'aliasrc'
-)
 
 nvim_setup
 
-for file in ${dotfiles[@]}
+update_files=(
+  '.vimrc'
+  '.zshrc'
+  '.tmux.conf'
+  '.bashrc'
+  '.hyper.js'
+  '.aliasrc'
+  '.config/git/ignore'
+)
+
+for file in ${update_files[@]}
 do
   remove_file $file
   symlink     $file

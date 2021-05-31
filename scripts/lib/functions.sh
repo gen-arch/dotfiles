@@ -14,10 +14,11 @@ function nvim_setup() {
 }
 
 function remove_file(){
-  local file=~/.$1
+  local file=~/$1
   [ -h $file ] && rm $file && echo "delete: $file"
 }
 
 function symlink(){
-  ln -s $CONF/$1 ~/.$1 && echo "create symlink: ~/.$1"
+  [[ $1 == */* ]] && mkdir -p ${1%/*} && echo "create directory: ~/${1%/*}"
+  ln -s $CONF/$1 ~/$1 && echo "create symlink: ~/$1"
 }
