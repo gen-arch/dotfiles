@@ -177,4 +177,30 @@ ${vcs_info_msg_0_} %{${fg[red]}%}%}$%{${reset_color}%} >> '
 #=======================================
 [ -f $HOME/dotfiles/scripts/aws_cli_complete.sh ] && source $HOME/dotfiles/scripts/aws_cli_complete.sh
 #=======================================
+#=======================================
+# oh-my-zsh
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#=======================================
+if [ -d $HOME/.oh-my-zsh ];then
+  export ZSH="$HOME/.oh-my-zsh"
+  ZSH_THEME="fino-time"
+  HIST_STAMPS="mm/dd/yyyy"
+  plugins=(
+    git
+    gcloud
+    lxd
+    ubuntu
+    systemd
+    gh
+    direnv
+    docker
+    bundler
+    dotenv
+    rake
+    rbenv
+    ruby
+    terraform
+  )
+  source $ZSH/oh-my-zsh.sh
+fi
 
