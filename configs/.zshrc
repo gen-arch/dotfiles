@@ -1,4 +1,31 @@
 #=======================================
+# oh-my-zsh
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#=======================================
+if [ -d $HOME/.oh-my-zsh ];then
+  export ZSH="$HOME/.oh-my-zsh"
+  ZSH_THEME="fino-time"
+  HIST_STAMPS="mm/dd/yyyy"
+  plugins=(
+    git
+    gcloud
+    lxd
+    ubuntu
+    systemd
+    gh
+    direnv
+    docker
+    bundler
+    dotenv
+    rake
+    rbenv
+    ruby
+    terraform
+  )
+  source $ZSH/oh-my-zsh.sh
+fi
+
+#=======================================
 #ローカル設定即時読みこみ
 #=======================================
 [ -f ~/.zshrc.first ] && source ~/.zshrc.first
@@ -159,12 +186,12 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]' #rebase 途中,merge コンフリ�
 #プロンプト
 #=======================================
 # プロンプト表示直前に vcs_info 呼び出し
-precmd () { vcs_info }
-
-# プロンプト（左）
-PROMPT='
-%{$fg[red]%}[%n@%m]%{$reset_color%} %{${fg[red]}%}[%~]%{${reset_color}%}
-${vcs_info_msg_0_} %{${fg[red]}%}%}$%{${reset_color}%} >> '
+#precmd () { vcs_info }
+#
+## プロンプト（左）
+#PROMPT='
+#%{$fg[red]%}[%n@%m]%{$reset_color%} %{${fg[red]}%}[%~]%{${reset_color}%}
+#${vcs_info_msg_0_} %{${fg[red]}%}%}$%{${reset_color}%} >> '
 
 # プロンプト（右）
 # RPROMPT='%{${fg[red]}%}[%~]%{${reset_color}%}'
@@ -177,30 +204,3 @@ ${vcs_info_msg_0_} %{${fg[red]}%}%}$%{${reset_color}%} >> '
 #=======================================
 [ -f $HOME/dotfiles/scripts/aws_cli_complete.sh ] && source $HOME/dotfiles/scripts/aws_cli_complete.sh
 #=======================================
-#=======================================
-# oh-my-zsh
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-#=======================================
-if [ -d $HOME/.oh-my-zsh ];then
-  export ZSH="$HOME/.oh-my-zsh"
-  ZSH_THEME="fino-time"
-  HIST_STAMPS="mm/dd/yyyy"
-  plugins=(
-    git
-    gcloud
-    lxd
-    ubuntu
-    systemd
-    gh
-    direnv
-    docker
-    bundler
-    dotenv
-    rake
-    rbenv
-    ruby
-    terraform
-  )
-  source $ZSH/oh-my-zsh.sh
-fi
-
