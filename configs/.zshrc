@@ -189,6 +189,7 @@ if [ -d $HOME/.oh-my-zsh ];then
     git
     gcloud
     lxd
+    archlinux
     ubuntu
     systemd
     gh

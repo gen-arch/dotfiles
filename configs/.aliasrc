@@ -47,3 +47,6 @@ alias ssh='TERM=xterm; ssh'
 
 # lang
 alias laenc='LANG="ja_JP.eucJP"'
+
+# gip
+alias gip='curl httpbin.org/ip'
