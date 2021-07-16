@@ -4,7 +4,7 @@
 #=======================================
 if [ -d $HOME/.oh-my-zsh ];then
   export ZSH="$HOME/.oh-my-zsh"
-  ZSH_THEME="steeef"
+  # ZSH_THEME="steeef"
   HIST_STAMPS="mm/dd/yyyy"
   plugins=(
     git
@@ -186,14 +186,14 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]' #rebase 途中,merge コンフリ�
 #プロンプト
 #=======================================
 # プロンプト表示直前に vcs_info 呼び出し
-#precmd () { vcs_info }
-#
-## プロンプト（左）
-#PROMPT='
-#%{$fg[red]%}[%n@%m]%{$reset_color%} %{${fg[red]}%}[%~]%{${reset_color}%}
-#${vcs_info_msg_0_} %{${fg[red]}%}%}$%{${reset_color}%} >> '
+precmd () { vcs_info }
 
-# プロンプト（右）
+# プロンプト（左）
+PROMPT='
+%{$fg[red]%}[%n@%m]%{$reset_color%} %{${fg[red]}%}[%~]%{${reset_color}%}
+${vcs_info_msg_0_} %{${fg[red]}%}%}$%{${reset_color}%} >> '
+
+#プロンプト（右）
 # RPROMPT='%{${fg[red]}%}[%~]%{${reset_color}%}'
 #=======================================
 #ローカル設定読み込み
