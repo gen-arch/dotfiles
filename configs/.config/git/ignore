@@ -1,4 +1,6 @@
 .terraform/
 .terraform.lock.hcl
 .envrc
+actions-runner/
+.VSCodeCounter/
 
