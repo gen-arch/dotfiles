@@ -1,8 +1,13 @@
 #!/bin/sh
 function env_install() {
   os=`uname -a`
-  if [ ! -e ~/.anyenv ]; then
-    git clone https://github.com/anyenv/anyenv ~/.anyenv
+  asdf_version="v0.9.0"
+  #if [ ! -e ~/.anyenv ]; then
+  #  git clone https://github.com/anyenv/anyenv ~/.anyenv
+  #fi
+
+  if [ ! -e ~/.adsf ]; then
+    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch $asdf_version
   fi
 }
 

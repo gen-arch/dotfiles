@@ -14,9 +14,13 @@ export PATH=$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/dotfiles/bin
 export TERM=xterm-256color
 
 
-if [ -e ~/.anyenv ]; then
- export PATH="$HOME/.anyenv/bin:$PATH"
- eval "$(anyenv init -)"
+#if [ -e ~/.anyenv ]; then
+# export PATH="$HOME/.anyenv/bin:$PATH"
+# eval "$(anyenv init -)"
+#fi
+
+if [ -e ~/.asdf ]; then
+  . $HOME/.asdf/asdf.sh
 fi
 
 if [ -e ~/go ]; then

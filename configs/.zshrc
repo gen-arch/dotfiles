@@ -6,6 +6,7 @@ if [ -d $HOME/.oh-my-zsh ];then
   export ZSH="$HOME/.oh-my-zsh"
   # ZSH_THEME="steeef"
   HIST_STAMPS="mm/dd/yyyy"
+  # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
   plugins=(
     git
     gcloud
@@ -21,6 +22,7 @@ if [ -d $HOME/.oh-my-zsh ];then
     rbenv
     ruby
     terraform
+    asdf
   )
   source $ZSH/oh-my-zsh.sh
 fi

@@ -119,6 +119,7 @@ set termguicolors
 "let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+set fileformat=unix
 
 syntax enable
 filetype plugin indent on
@@ -142,5 +143,7 @@ if system('uname -a | grep -i microsoft') != ''
     autocmd!
     autocmd TextYankPost * :call system('clip.exe', @")
   augroup END
+  set clipboard&
+  set clipboard^=unnamedplus
 endif
 
