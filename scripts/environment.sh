@@ -19,15 +19,15 @@ export TERM=xterm-256color
 # eval "$(anyenv init -)"
 #fi
 
+#if [ -e ~/go ]; then
+#  local version=`goenv version | awk '{ print $1}'`
+#  export GOENV_ROOT=$HOME/.anyenv/envs/goenv
+#  export GOPATH=$HOME/go/$version
+#  export PATH=$GOENV_ROOT/bin:$GOPATH/bin:$PATH
+#fi
+
 if [ -e ~/.asdf ]; then
   . $HOME/.asdf/asdf.sh
-fi
-
-if [ -e ~/go ]; then
-  local version=`goenv version | awk '{ print $1}'`
-  export GOENV_ROOT=$HOME/.anyenv/envs/goenv
-  export GOPATH=$HOME/go/$version
-  export PATH=$GOENV_ROOT/bin:$GOPATH/bin:$PATH
 fi
 
 if [ "$TMUX_MODE" != "true" ]; then
