@@ -32,7 +32,10 @@ fi
 
 if [ "$TMUX_MODE" != "true" ]; then
   export TMUX_MODE="true"
-  tmux -2
+
+  if [ -f $HOME/.tmux.conf ]; then
+    tmux -2
+  fi
 fi
 
 if type "direnv" > /dev/null 2>&1; then
