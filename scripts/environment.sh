@@ -26,9 +26,9 @@ export TERM=xterm-256color
 #  export PATH=$GOENV_ROOT/bin:$GOPATH/bin:$PATH
 #fi
 
-if [ -e ~/.asdf ]; then
-  . $HOME/.asdf/asdf.sh
-fi
+#if [ -e ~/.asdf ]; then
+#  . $HOME/.asdf/asdf.sh
+#fi
 
 if [ "$TMUX_MODE" != "true" ]; then
   export TMUX_MODE="true"

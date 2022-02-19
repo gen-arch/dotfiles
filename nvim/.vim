@@ -1,0 +1,1 @@
+/home/toshifum/.vim

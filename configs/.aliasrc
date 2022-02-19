@@ -3,6 +3,7 @@ alias vi="vim"
 
 if type nvim &> /dev/null; then
   alias vi="nvim"
+  alias vim="nvim"
   export EDITOR=nvim
 fi
 

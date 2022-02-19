@@ -29,15 +29,9 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
   if s:complate == 'deoplate'
-    " Add or remove your plugins here like this:
-    if has('python3') && system('pip3 show neovim') !=# ''
-      call dein#load_toml(s:deoplete_toml, {'lazy': 1})
-
-      if !has('nvim')
-        call dein#add ('roxma/nvim-yarp')
-        call dein#add ('roxma/vim-hug-neovim-rpc')
-      endif
-    endif
+    call dein#load_toml(s:deoplete_toml, {'lazy': 1})
+    call dein#add ('roxma/nvim-yarp')
+    call dein#add ('roxma/vim-hug-neovim-rpc')
   elseif s:complate == 'asyncomplete'
     call dein#load_toml(s:asyncomplete_toml, {'lazy': 1})
   endif

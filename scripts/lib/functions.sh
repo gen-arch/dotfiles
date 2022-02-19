@@ -2,14 +2,16 @@
 function nvim_setup() {
   local dir=$XDG_CONFIG_HOME/nvim
   local vimplg=$dir/.vim
-  local vimrc=$dir/init.vim
+  local luaplg=$dir/lua
+  local vimrc=$dir/init.lua
 
   [ ! -e $dir ] && mkdir -p $dir
 
   [ -h $vimplg   ] && rm $vimplg
   [ -h $vimrc    ] && rm $vimrc
-  [ -e ~/.vim      ] && ln -s ~/.vim $vimplg
-  [ -e $CONF/vimrc ] && ln -s $CONF/vimrc $vimrc
+  [ -e ~/.vim              ] && ln -s ~/.vim              $vimplg
+  [ -e $ROOT/nvim/lua      ] && ln -s $ROOT/nvim/lua      $luaplg
+  [ -e $ROOT/nvim/init.lua ] && ln -s $ROOT/nvim/init.lua $vimrc
   echo "update nvim"
 }
 
