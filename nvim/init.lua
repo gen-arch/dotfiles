@@ -16,6 +16,9 @@ require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
   use 'scrooloose/nerdtree'
+  use 'airblade/vim-gitgutter'
+  use 'bronson/vim-trailing-whitespace'
+  use 'Yggdroot/indentLine'
 
   if packer_bootstrap then
     require("packer").sync()
