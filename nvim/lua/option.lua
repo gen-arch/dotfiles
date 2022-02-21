@@ -3,8 +3,8 @@ local cmd = vim.cmd
 
 cmd([[autocmd BufWritePost init.lua source <afile> | PackerCompile]])
 cmd([[colorscheme molokai                                         ]])
-cmd([[let g:molokai_original=1                                    ]])
-cmd([[let g:rehash256=1                                           ]])
+--cmd([[let g:molokai_original=1                                    ]])
+--cmd([[let g:rehash256=1                                           ]])
 cmd([[set number                                                  ]])
 cmd([[set scrolloff=5                                             ]])
 cmd([[set fenc=utf-8                                              ]])
