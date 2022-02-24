@@ -10,7 +10,7 @@ fi
 # bundler
 alias be="bundle exec"
 alias bcp='bundle config set path "vendor/bundle"'
-alias bi='bundle install --local'
+alias bi='bundle install'
 alias bil="bundle install --local"
 alias bp="bundle package --all"
 
