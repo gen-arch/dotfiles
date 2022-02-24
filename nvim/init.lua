@@ -6,7 +6,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim' 
+  use 'wbthomason/packer.nvim'
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
   use 'tomasr/molokai'
@@ -16,6 +16,9 @@ require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
   use 'scrooloose/nerdtree'
+  use 'airblade/vim-gitgutter'
+  use 'bronson/vim-trailing-whitespace'
+  use 'Yggdroot/indentLine'
 
   if packer_bootstrap then
     require("packer").sync()

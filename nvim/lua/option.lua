@@ -3,8 +3,8 @@ local cmd = vim.cmd
 
 cmd([[autocmd BufWritePost init.lua source <afile> | PackerCompile]])
 cmd([[colorscheme molokai                                         ]])
-cmd([[let g:molokai_original = 1                                  ]])
-cmd([[let g:rehash256 = 1                                         ]])
+--cmd([[let g:molokai_original=1                                    ]])
+--cmd([[let g:rehash256=1                                           ]])
 cmd([[set number                                                  ]])
 cmd([[set scrolloff=5                                             ]])
 cmd([[set fenc=utf-8                                              ]])
@@ -19,6 +19,7 @@ cmd([[set smartindent                                             ]])
 cmd([[syntax enable                                               ]])
 cmd([[filetype plugin indent on                                   ]])
 cmd([[map <C-n> :NERDTreeToggle<CR>                               ]])
+cmd([[nmap <Esc><Esc> :nohlsearch<CR><Esc>                        ]])
 
 if fn.system({"uname","-a","|","grep", "-i", "microsoft"}) then
   cmd([[
