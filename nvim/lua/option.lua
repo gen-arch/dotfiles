@@ -31,3 +31,14 @@ if fn.system({"uname","-a","|","grep", "-i", "microsoft"}) then
   cmd([[set clipboard^=unnamedplus]])
 end
 
+vim.diagnostic.config({
+  virtual_text = false,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = false,
+  severity = vim.diagnostic.severity.WARN,
+})
+
+
+
