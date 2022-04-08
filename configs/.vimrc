@@ -23,18 +23,18 @@ if dein#load_state(s:dein_dir)
 
   " 起動時に読み込むプラグイン群
   call dein#load_toml(s:toml,      {'lazy': 0})
-  call dein#load_toml(s:lsp_toml,  {'lazy': 0})
+  "call dein#load_toml(s:lsp_toml,  {'lazy': 0})
 
   " 遅延読み込みしたいプラグイン群
-  call dein#load_toml(s:lazy_toml, {'lazy': 1})
+  "call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-  if s:complate == 'deoplate'
-    call dein#load_toml(s:deoplete_toml, {'lazy': 1})
-    call dein#add ('roxma/nvim-yarp')
-    call dein#add ('roxma/vim-hug-neovim-rpc')
-  elseif s:complate == 'asyncomplete'
-    call dein#load_toml(s:asyncomplete_toml, {'lazy': 1})
-  endif
+  "if s:complate == 'deoplate'
+  "  call dein#load_toml(s:deoplete_toml, {'lazy': 1})
+  "  call dein#add ('roxma/nvim-yarp')
+  "  call dein#add ('roxma/vim-hug-neovim-rpc')
+  "elseif s:complate == 'asyncomplete'
+  "  call dein#load_toml(s:asyncomplete_toml, {'lazy': 1})
+  "endif
 
   call dein#end()
   call dein#save_state()
