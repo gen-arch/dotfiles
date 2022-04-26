@@ -13,19 +13,6 @@ export SAVEHIST=100000
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/dotfiles/bin
 export TERM=xterm-256color
 
-
-#if [ -e ~/.anyenv ]; then
-# export PATH="$HOME/.anyenv/bin:$PATH"
-# eval "$(anyenv init -)"
-#fi
-
-#if [ -e ~/go ]; then
-#  local version=`goenv version | awk '{ print $1}'`
-#  export GOENV_ROOT=$HOME/.anyenv/envs/goenv
-#  export GOPATH=$HOME/go/$version
-#  export PATH=$GOENV_ROOT/bin:$GOPATH/bin:$PATH
-#fi
-
 if [ -e ~/.asdf ]; then
   . $HOME/.asdf/asdf.sh
 fi
@@ -36,10 +23,6 @@ if [ "$TMUX_MODE" != "true" ]; then
   if [ -f $HOME/.tmux.conf ]; then
     tmux -2
   fi
-fi
-
-if type "direnv" > /dev/null 2>&1; then
-  eval "$(direnv hook zsh)"
 fi
 
 if [ "$LOG_MODE" != "true" ] && [ -f $HOME/.log.validity ]; then
