@@ -19,6 +19,8 @@ require('packer').startup(function(use)
   use 'airblade/vim-gitgutter'
   use 'bronson/vim-trailing-whitespace'
   use 'Yggdroot/indentLine'
+  use 'tpope/vim-endwise'
+  use 'tpope/vim-commentary'
 
   if packer_bootstrap then
     require("packer").sync()
