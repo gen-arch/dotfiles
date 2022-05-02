@@ -19,6 +19,7 @@ require('packer').startup(function(use)
   use 'airblade/vim-gitgutter'
   use 'bronson/vim-trailing-whitespace'
   use 'Yggdroot/indentLine'
+  use 'hashivim/vim-terraform'
 
   if packer_bootstrap then
     require("packer").sync()

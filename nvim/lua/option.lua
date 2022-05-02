@@ -31,16 +31,17 @@ cmd([[autocmd BufNewFile,BufRead *.tf         setlocal filetype=terraform]])
 cmd([[autocmd BufNewFile,BufRead .envrc       setlocal filetype=bash]])
 cmd([[autocmd BufNewFile,BufRead \*.{md,mdwn,mkd,mkdn,mark\*} set filetype=markdown]])
 cmd([[autocmd BufNewFile,BufRead *.ssh_conf set filetype=sshconfig]])
+cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
 
-if fn.system({"uname","-a","|","grep", "-i", "microsoft"}) then
-  cmd([[
+if fn.system({ "uname", "-a", "|", "grep", "-i", "microsoft" }) then
+    cmd([[
     augroup myYank
       autocmd!
       autocmd TextYankPost * :call system('clip.exe', @")
     augroup END
   ]])
-  cmd([[set clipboard&]])
-  cmd([[set clipboard^=unnamedplus]])
+    cmd([[set clipboard&]])
+    cmd([[set clipboard^=unnamedplus]])
 end
 
 vim.diagnostic.config({
@@ -51,6 +52,3 @@ vim.diagnostic.config({
   severity_sort = false,
   severity = vim.diagnostic.severity.WARN,
 })
-
-
-
