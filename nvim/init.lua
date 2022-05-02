@@ -20,6 +20,8 @@ require('packer').startup(function(use)
   use 'bronson/vim-trailing-whitespace'
   use 'Yggdroot/indentLine'
   use 'hashivim/vim-terraform'
+  use 'tpope/vim-endwise'
+  use 'tpope/vim-commentary'
 
   if packer_bootstrap then
     require("packer").sync()

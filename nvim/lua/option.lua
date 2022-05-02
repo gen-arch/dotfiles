@@ -3,8 +3,6 @@ local cmd = vim.cmd
 
 cmd([[autocmd BufWritePost init.lua source <afile> | PackerCompile]])
 cmd([[colorscheme molokai                                         ]])
---cmd([[let g:molokai_original=1                                    ]])
---cmd([[let g:rehash256=1                                           ]])
 cmd([[set number                                                  ]])
 cmd([[set scrolloff=5                                             ]])
 cmd([[set fenc=utf-8                                              ]])
@@ -47,8 +45,8 @@ end
 vim.diagnostic.config({
   virtual_text = false,
   signs = true,
-  underline = true,
-  update_in_insert = false,
-  severity_sort = false,
-  severity = vim.diagnostic.severity.WARN,
+  --  underline = true,
+  --  update_in_insert = false,
+  --  severity_sort = false,
+  --  severity = vim.diagnostic.severity.WARN,
 })
