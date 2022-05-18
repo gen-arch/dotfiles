@@ -14,8 +14,8 @@ cmd([[set tabstop=2                                               ]])
 cmd([[set shiftwidth=2                                            ]])
 cmd([[set laststatus=2                                            ]])
 cmd([[set smartindent                                             ]])
-cmd([[set fileformat=unix                                         ]])
 cmd([[set list                                                    ]])
+cmd([[set ffs=unix,dos,mac                                        ]])
 cmd([[syntax enable                                               ]])
 cmd([[filetype plugin indent on                                   ]])
 cmd([[map <C-n> :NERDTreeToggle<CR>                               ]])
@@ -29,7 +29,7 @@ cmd([[autocmd BufNewFile,BufRead *.tf         setlocal filetype=terraform]])
 cmd([[autocmd BufNewFile,BufRead .envrc       setlocal filetype=bash]])
 cmd([[autocmd BufNewFile,BufRead \*.{md,mdwn,mkd,mkdn,mark\*} set filetype=markdown]])
 cmd([[autocmd BufNewFile,BufRead *.ssh_conf set filetype=sshconfig]])
-cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+cmd([[autocmd BufWritePre *.tf lua vim.lsp.buf.formatting_sync()]])
 
 if fn.system({ "uname", "-a", "|", "grep", "-i", "microsoft" }) then
     cmd([[
