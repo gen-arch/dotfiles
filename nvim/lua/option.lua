@@ -29,6 +29,7 @@ cmd([[autocmd BufNewFile,BufRead *.tf         setlocal filetype=terraform]])
 cmd([[autocmd BufNewFile,BufRead .envrc       setlocal filetype=bash]])
 cmd([[autocmd BufNewFile,BufRead \*.{md,mdwn,mkd,mkdn,mark\*} set filetype=markdown]])
 cmd([[autocmd BufNewFile,BufRead *.ssh_conf set filetype=sshconfig]])
+cmd([[autocmd BufNewFile,BufRead *.eyaml set filetype=yaml]])
 cmd([[autocmd BufWritePre *.tf lua vim.lsp.buf.formatting_sync()]])
 
 if fn.system({ "uname", "-a", "|", "grep", "-i", "microsoft" }) then
