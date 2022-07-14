@@ -1,0 +1,9 @@
+#!/bin/bash
+url=$1
+
+while true;
+do
+  status=`curl -L "$1" -o /dev/null -w '%{http_code}\n' -s`
+  echo "$(date) -> HTTP Status $status"
+  sleep 1
+done
