@@ -127,6 +127,7 @@ autocmd BufNewFile,BufRead Vagrantfile  setlocal filetype=ruby
 autocmd BufNewFile,BufRead Capfile      setlocal filetype=ruby
 autocmd BufNewFile,BufRead *.tf         setlocal filetype=terraform
 autocmd BufNewFile,BufRead .envrc       setlocal filetype=bash
+autocmd BufNewFile,BufRead *.eyaml      setlocal filetype=yaml
 autocmd BufNewFile,BufRead \*.{md,mdwn,mkd,mkdn,mark\*} set filetype=markdown
 autocmd BufNewFile,BufRead *.ssh_conf set filetype=sshconfig
 autocmd QuickFixCmdPost *grep* cwindow
