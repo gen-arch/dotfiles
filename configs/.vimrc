@@ -132,13 +132,16 @@ autocmd BufNewFile,BufRead \*.{md,mdwn,mkd,mkdn,mark\*} set filetype=markdown
 autocmd BufNewFile,BufRead *.ssh_conf set filetype=sshconfig
 autocmd QuickFixCmdPost *grep* cwindow
 
-" Windows Subsystem for Linux で、ヤンクでクリップボードにコピー
-if system('uname -a | grep -i microsoft') != ''
-  augroup myYank
-    autocmd!
-    autocmd TextYankPost * :call system('clip.exe', @")
-  augroup END
-  set clipboard&
-  set clipboard^=unnamedplus
+# https://github.com/equalsraf/win32yank/releases/tag/v0.1.1
+if executable('win32yank.exe')
+  au TextYankPost * call system('win32yank.exe -i &', @")
+  function Paste(p)
+    let sysclip=system('win32yank.exe -o')
+    if sysclip != @"
+      let @"=sysclip
+    endif
+    return a:p
+  endfunction
+  noremap <expr> p Paste('p')
+  noremap <expr> P Paste('P')
 endif
-
