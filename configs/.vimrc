@@ -132,7 +132,7 @@ autocmd BufNewFile,BufRead \*.{md,mdwn,mkd,mkdn,mark\*} set filetype=markdown
 autocmd BufNewFile,BufRead *.ssh_conf set filetype=sshconfig
 autocmd QuickFixCmdPost *grep* cwindow
 
-# https://github.com/equalsraf/win32yank/releases/tag/v0.1.1
+" https://github.com/equalsraf/win32yank/releases/tag/v0.1.1
 if executable('win32yank.exe')
   au TextYankPost * call system('win32yank.exe -i &', @")
   function Paste(p)
