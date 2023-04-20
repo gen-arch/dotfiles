@@ -206,3 +206,9 @@ ${vcs_info_msg_0_} %{${fg[red]}%}%}$%{${reset_color}%} >> '
 #=======================================
 [ -f $HOME/dotfiles/scripts/aws_cli_complete.sh ] && source $HOME/dotfiles/scripts/aws_cli_complete.sh
 #=======================================
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/toshifum/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/toshifum/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/toshifum/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/toshifum/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
