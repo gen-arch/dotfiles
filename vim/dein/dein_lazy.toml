@@ -100,9 +100,9 @@ endfunction
 '''
 
 # [markdown]--------------------------------------
-#[[plugins]]
-#repo  = 'tpope/vim-markdown'
-#on_ft = ['markdown']
+[[plugins]]
+repo  = 'tpope/vim-markdown'
+on_ft = ['markdown']
 
 [[plugins]]
 repo  = 'gabrielelana/vim-markdown'
