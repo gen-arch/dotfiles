@@ -8,7 +8,6 @@ if [ -d $HOME/.oh-my-zsh ];then
   HIST_STAMPS="mm/dd/yyyy"
   # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
   plugins=(
-    git
     gcloud
     lxd
     ubuntu
