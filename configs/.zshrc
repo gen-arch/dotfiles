@@ -212,3 +212,4 @@ if [ -f '/Users/toshifum/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Us
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/toshifum/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/toshifum/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
+
