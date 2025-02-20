@@ -4,7 +4,7 @@
 #=======================================
 if [ -d $HOME/.oh-my-zsh ];then
   export ZSH="$HOME/.oh-my-zsh"
-  # ZSH_THEME="steeef"
+  ZSH_THEME="xiong-chiamiov-plus"
   HIST_STAMPS="mm/dd/yyyy"
   # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
   plugins=(
@@ -22,7 +22,6 @@ if [ -d $HOME/.oh-my-zsh ];then
     rbenv
     ruby
     terraform
-    asdf
   )
   source $ZSH/oh-my-zsh.sh
 fi
@@ -191,9 +190,9 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]' #rebase 途中,merge コンフリ�
 precmd () { vcs_info }
 
 # プロンプト（左）
-PROMPT='
-%{$fg[red]%}[%n@%m]%{$reset_color%} %{${fg[red]}%}[%~]%{${reset_color}%}
-${vcs_info_msg_0_} %{${fg[red]}%}%}$%{${reset_color}%} >> '
+#PROMPT='
+#%{$fg[red]%}[%n@%m]%{$reset_color%} %{${fg[red]}%}[%~]%{${reset_color}%}
+#${vcs_info_msg_0_} %{${fg[red]}%}%}$%{${reset_color}%} >> '
 
 #プロンプト（右）
 # RPROMPT='%{${fg[red]}%}[%~]%{${reset_color}%}'
@@ -208,7 +207,7 @@ ${vcs_info_msg_0_} %{${fg[red]}%}%}$%{${reset_color}%} >> '
 #=======================================
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/toshifum/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/toshifum/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/toshifum/tools/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/toshifum/tools/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/toshifum/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/toshifum/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/toshifum/tools/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/toshifum/tools/google-cloud-sdk/completion.zsh.inc'; fi
