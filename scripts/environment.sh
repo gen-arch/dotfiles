@@ -13,10 +13,6 @@ export SAVEHIST=100000
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/dotfiles/bin
 export TERM=xterm-256color
 
-if [ -e ~/.asdf ]; then
-  . $HOME/.asdf/asdf.sh
-fi
-
 if [ "$TMUX_MODE" != "true" ]; then
   export TMUX_MODE="true"
 
