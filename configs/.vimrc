@@ -12,7 +12,8 @@ let s:lazy_toml           = s:toml_dir . 'dein_lazy.toml'
 let s:deoplete_toml       = s:toml_dir . 'deoplete.toml'
 let s:lsp_toml            = s:toml_dir . 'lsp.toml'
 let s:asyncomplete_toml   = s:toml_dir . 'asyncomplete.toml'
-let s:complate            = 'deoplate'
+let s:ddc_toml            = s:toml_dir . 'ddc.toml'
+let s:complate            = 'ddc'
 
 if !isdirectory(s:dein_repo_dir)
   call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
@@ -34,6 +35,8 @@ if dein#load_state(s:dein_dir)
     call dein#add ('roxma/vim-hug-neovim-rpc')
   elseif s:complate == 'asyncomplete'
     call dein#load_toml(s:asyncomplete_toml, {'lazy': 1})
+  elseif s:complate == 'ddc'
+    call dein#load_toml(s:ddc_toml, {'lazy': 1})
   endif
 
   call dein#end()

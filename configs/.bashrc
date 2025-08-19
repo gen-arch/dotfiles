@@ -34,3 +34,4 @@ export PS1='\[\033[36;40;1m\] [\u@\h]\[\033[01;34m\] \w\[\033[00m\] \[\033[31m\]
             fi
           fi
           
+. "/home/toshifum/.deno/env"

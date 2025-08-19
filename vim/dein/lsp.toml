@@ -25,3 +25,20 @@ repo      = 'prabirshrestha/async.vim'
 [[plugins]]
 repo      = 'mattn/vim-lsp-settings'
 
+####################################
+# DDC Settings
+####################################
+[[plugins]]
+repo = 'Shougo/ddc-source-around'
+
+[[plugins]]
+repo = 'Shougo/ddc-filter-matcher_head'
+
+[[plugins]]
+repo = 'Shougo/ddc-filter-sorter_rank'
+
+[[plugins]]
+repo = 'shun/ddc-source-vim-lsp'
+
+[[plugins]]
+repo = 'LumaKernel/ddc-source-file'
