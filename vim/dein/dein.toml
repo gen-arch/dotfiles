@@ -15,7 +15,7 @@ repo = 'Yggdroot/indentLine'
 repo = 'bronson/vim-trailing-whitespace'
 
 # status line
-[[plugin]]
+[[plugins]]
 repo = 'itchyny/lightline.vim'
 
 # contextでファイルタイプを変更
@@ -79,3 +79,4 @@ colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
 '''
+
