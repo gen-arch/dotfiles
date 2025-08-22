@@ -65,11 +65,7 @@ call denite#custom#var('grep', 'default_opts', ['--follow', '--no-group', '--no-
 
 # comment out
 [[plugins]]
-repo     = 'scrooloose/nerdcommenter'
-hook_add = '''
-  let g:NERDSpaceDelims  = 1
-  let g:NERDDefaultAlign = 'left'
-'''
+repo     = 'tpope/vim-commentary'
 
 ##colorschema molokai
 [[plugins]]

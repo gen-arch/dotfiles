@@ -121,6 +121,7 @@ set fileformat=unix
 syntax enable
 filetype plugin indent on
 
+autocmd BufRead,BufNewFile *            setlocal fileformat=unix
 autocmd BufNewFile,BufRead *.rb nnoremap <C-e> :!bundle exec ruby %
 autocmd BufNewFile,BufRead *.sh nnoremap <C-e> :!source %
 autocmd BufNewFile,BufRead *.ts         setlocal filetype=typescript
@@ -140,7 +141,7 @@ autocmd QuickFixCmdPost *grep* cwindow
 if executable('win32yank.exe')
   au TextYankPost * call system('win32yank.exe -i &', @")
   function Paste(p)
-    let sysclip=system('win32yank.exe -o')
+    let sysclip=system("win32yank.exe -o --lf")
     if sysclip != @"
       let @"=sysclip
     endif
