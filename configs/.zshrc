@@ -1,4 +1,6 @@
 # Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/toshifum/.zsh/completions:"* ]]; then export FPATH="/Users/toshifum/.zsh/completions:$FPATH"; fi
+# Add deno completions to search path
 if [[ ":$FPATH:" != *":/home/toshifum/.zsh/completions:"* ]]; then export FPATH="/home/toshifum/.zsh/completions:$FPATH"; fi
 #=======================================
 # oh-my-zsh
@@ -212,5 +214,3 @@ if [ -f '/Users/toshifum/tools/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/toshifum/tools/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/toshifum/tools/google-cloud-sdk/completion.zsh.inc'; fi
-
-. "/home/toshifum/.deno/env"
