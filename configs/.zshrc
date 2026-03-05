@@ -1,7 +1,3 @@
-# Add deno completions to search path
-if [[ ":$FPATH:" != *":/Users/toshifum/.zsh/completions:"* ]]; then export FPATH="/Users/toshifum/.zsh/completions:$FPATH"; fi
-# Add deno completions to search path
-if [[ ":$FPATH:" != *":/home/toshifum/.zsh/completions:"* ]]; then export FPATH="/home/toshifum/.zsh/completions:$FPATH"; fi
 #=======================================
 # oh-my-zsh
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
